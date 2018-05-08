@@ -1,5 +1,8 @@
+# Store the Age and PhD columns in one DataFrame and delete the data of all people who dont have a PhD
 import numpy as np
+import pandas as pd
+
 path_to_csv='c:\\temp\\SalaryGender.csv'
-arr = np.loadtxt(path_to_csv, dtype=np.object, delimiter=",", skiprows=1)
-for i in range(len(arr)):
-    print arr[i][2]
+A = np.loadtxt(path_to_csv, dtype=np.object, delimiter=",", skiprows=1)
+
+print A[:, [2, 3]][A[:, 3] == 1]
