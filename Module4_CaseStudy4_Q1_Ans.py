@@ -1,4 +1,4 @@
-#Plot Total Sales Per Month for Year 2011.
+#Plot Total Sales Per Month for Year 2011. Any chart (scatter chart)
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
