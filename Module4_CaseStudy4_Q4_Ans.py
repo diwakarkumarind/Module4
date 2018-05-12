@@ -1,4 +1,5 @@
-#Plot Total Sales Per Month for Year 2011. Any chart (scatter chart)
+# Plot Scatter Plot for the invoice amounts and see the concentration of amount.
+# In which range most of the invoice amounts are concentrated
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
