@@ -1,4 +1,4 @@
-#Plot Total Sales Per Month for Year 2011. Bar chart
+#Plot Total Sales Per Month for Year 2011 as Bar Chart.  Is Bar Chart Better to visualize than Simple Plot?
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
