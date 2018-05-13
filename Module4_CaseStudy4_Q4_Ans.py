@@ -4,12 +4,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 dataset=pd.read_csv("c:\\temp\\BigMartSalesData.csv")
-selected_data=dataset.loc[:,['InvoiceNo','Amount']]
-x=np.array(selected_data['InvoiceNo'])
-y=np.array(selected_data['Amount'])
-plt.scatter(x,y)
-plt.xlabel('Invoice No')
+selected_data=dataset.loc[:,['Country','Amount']]
+x=np.array(selected_data["Country"])
+y=np.array(selected_data["Amount"])
+x2=np.unique(x)
+y2=selected_data.groupby('Country')['Amount'].sum()
+df=pd.DataFrame(y2)
+y3=df['Amount'].values.tolist()
+plt.scatter(x2,y3)
+plt.xlabel('Country')
 plt.ylabel('Amount')
-plt.grid()
-plt.savefig('C:\\Users\\Diwakar\\Pictures\\TotalSales2011_scatter.png')
+plt.savefig('c:\\Users\\Diwakar\\Pictures\\scatter_graph001.png')
 plt.show()
+
+
